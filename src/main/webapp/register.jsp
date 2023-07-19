@@ -44,7 +44,7 @@
     }
   }
 </script>
-<div class="container-fluid">
+<div class="container-fluid" style="margin-top: 80px">
   <div class="row mt-5">
     <div class="col-md-3 offset-md-4">
       <div class="card">
@@ -57,7 +57,7 @@
           </div>
 
           <h2 class="text-center my-3">Sign Up</h2>
-          <form name="form1" action="RegisterServlet" method="post" onsubmit="return validate()">
+          <form name="form1" action="RegisterServlet" method="post" enctype="multipart/form-data" onsubmit="return validate()">
             <div class="form-group">
               <label for="unm">User Name</label>
               <input type="text" name="unm" class="form-control" id="unm"  placeholder="Enter User Name">
@@ -81,6 +81,13 @@
             <div class="form-group">
               <label for="adds">Address</label>
               <textarea class="form-control" name="adds" id="adds" placeholder="Enter Address"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="fl">Profile</label>
+              <input type="file" name="fl" class="form-control" id="fl">
+            </div>
+            <div class="container text-center">
+              <a href="login.jsp">Already registered?,Login here</a>
             </div>
             <div class="container text-center">
               <button type="submit" class="btn btn-info">Register</button>

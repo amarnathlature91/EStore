@@ -14,7 +14,6 @@ public class User {
     private String profilePic;
     @Column(length = 1500)
     private String address;
-
     private String role;
 
 

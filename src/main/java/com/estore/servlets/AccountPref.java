@@ -5,21 +5,23 @@ import com.estore.helper.FactoryProvider;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
-import javax.servlet.*;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
-import javax.servlet.annotation.*;
 import java.io.*;
 
 @MultipartConfig
-@WebServlet(name = "RegisterServlet", value = "/RegisterServlet")
-public class RegisterServlet extends HttpServlet {
+@WebServlet(name = "AccountPref", value = "/AccountPref")
+public class AccountPref extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
         try {
             response.setContentType("text/html");
             PrintWriter out = response.getWriter();
 
+//            fetching all parameters from Form
+            int uid = Integer.parseInt(request.getParameter("userid"));
             String unm = request.getParameter("unm");
             String eml = request.getParameter("eml");
             String pwd1 = request.getParameter("pwd1");
@@ -27,14 +29,25 @@ public class RegisterServlet extends HttpServlet {
             String adds = request.getParameter("adds");
             Part photo = request.getPart("fl");
             String role = "user";
+            String cnf=request.getParameter("dl");
 
-            User usr = new User();
             Session hbses = FactoryProvider.getFactory().openSession();
             Transaction tx = hbses.beginTransaction();
+            User usr = hbses.get(User.class, uid);
+
+            if (cnf.trim().equals("yes")){
+                String filePath = request.getRealPath("img") + File.separator + "user" + File.separator + usr.getProfilePic();
+                File file = new File(filePath);
+                boolean deleted = file.delete();
+                usr.setProfilePic("alt_profile.png");
+                hbses.save(usr);
+            }
 
 //            checking if user submitted new file
             if (photo.getSize() > 0) {
+
                 try {
+
 //            saving user
                     usr.setUserName(unm);
                     usr.setEmail(eml);
@@ -67,20 +80,20 @@ public class RegisterServlet extends HttpServlet {
                 usr.setPassword(pwd1);
                 usr.setContact(cnt);
                 usr.setAddress(adds);
-                usr.setProfilePic("alt_profile.png");
                 usr.setRole(role);
                 hbses.save(usr);
             }
             tx.commit();
             hbses.close();
+
 //            update redirecting
             HttpSession session = request.getSession();
-            session.setAttribute("msg", "Registration Successful.!");
-            response.sendRedirect("register.jsp");
+            session.setAttribute("msg", "Changes Saved.!");
+            response.sendRedirect("user.jsp");
             return;
-        }
-        catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
+
     }
 }

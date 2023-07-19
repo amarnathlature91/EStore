@@ -25,7 +25,7 @@
 </script>
 
 <div class="container-fluid">
-    <div class="row mt-5">
+    <div class="row" style="margin-top: 80px">
         <div class="col-md-3 offset-md-4">
             <div class="card">
                 <%@include file="components/message.jsp"%>

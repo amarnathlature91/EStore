@@ -16,7 +16,7 @@
 <body>
 <%@include file="components/navbar.jsp" %>
 
-<div class="container">
+<div class="container" style="margin-top: 80px">
     <div class="row mt-5">
         <div class="col-md-6">
             <%--            card --%>
@@ -47,7 +47,7 @@
                         </div>
                         <div class="form-group">
                             <label for="bilAdd">Shipping/Billing Address</label>
-                            <textarea value="<%=usr.getAddress()%>" class="form-control" id="bilAdd" rows="3"></textarea>
+                            <textarea class="form-control" id="bilAdd" rows="3"><%=usr.getAddress()%></textarea>
                         </div>
                         <div class="container text-center">
                             <button class="btn btn-success">Order Now</button>

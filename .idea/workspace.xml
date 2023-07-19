@@ -9,7 +9,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef580a4c-2436-4cee-9ad5-0587ed31f6b4" name="Changes" comment="Commited project" />
+    <list default="true" id="ef580a4c-2436-4cee-9ad5-0587ed31f6b4" name="Changes" comment="Commited project">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/estore/dao/FavoritesDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/estore/entities/Favorites.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/estore/servlets/AccountPref.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/favorites.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/orders.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/settings.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/user/alt_profile.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/estore/entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/estore/entities/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/estore/servlets/RegisterServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/estore/servlets/RegisterServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/checkout.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/checkout.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/components/navbar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/components/navbar.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/register.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/user.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/user.jsp" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,9 +39,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JavaScript File" />
         <option value="Jsp File" />
+        <option value="Class" />
+        <option value="Servlet" />
       </list>
     </option>
   </component>
@@ -53,6 +72,9 @@
     </option>
   </component>
   <component name="ProjectId" id="2SZjRoIm4bLhXnircRismXL508v" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -64,20 +86,33 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;deletionFromPopupRequiresConfirmation&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/amarl/Documents/MyProjects/EStore/src/main/webapp/img/product&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/amarl/Documents/MyProjects/EStore/src/main/webapp/img/user&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.17&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;ChangesTree.GroupingKeys&quot;: [
+    ]
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\amarl\Documents\MyProjects\EStore\src\main\webapp\img\user" />
+      <recent name="C:\Users\amarl\Documents\MyProjects\EStore\target\EStore-1.0-SNAPSHOT\img\user" />
+      <recent name="C:\Users\amarl\Documents\MyProjects\EStore\src\main\webapp\img" />
       <recent name="C:\Users\amarl\Documents\MyProjects\EStore\src\main\webapp\img\product" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\amarl\Documents\MyProjects\EStore\target\EStore-1.0-SNAPSHOT\img\user" />
+    </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.index.jsp">
+  <component name="RunManager" selected="JavaScript Debug.user.jsp">
     <configuration name="index.jsp" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:8181/EStore_war_exploded/index.jsp">
+      <method v="2" />
+    </configuration>
+    <configuration name="user.jsp" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:8181/EStore_war_exploded/user.jsp">
       <method v="2" />
     </configuration>
     <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
@@ -251,6 +286,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.user.jsp" />
         <item itemvalue="JavaScript Debug.index.jsp" />
       </list>
     </recent_temporary>
@@ -272,6 +308,9 @@
       <workItem from="1689497604508" duration="3083000" />
       <workItem from="1689524085365" duration="11018000" />
       <workItem from="1689564462759" duration="4117000" />
+      <workItem from="1689584664061" duration="463000" />
+      <workItem from="1689666830778" duration="23132000" />
+      <workItem from="1689743980572" duration="401000" />
     </task>
     <task id="LOCAL-00001" summary="Commited project">
       <created>1689568879328</created>
@@ -280,7 +319,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689568879328</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Commited project">
+      <created>1689584774322</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1689584774322</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

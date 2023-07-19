@@ -2,7 +2,7 @@
 <%
     User usr1 = (User) session.getAttribute("current-user");
 %>
-<nav class="navbar navbar-expand-lg navbar-dark" style="background:#546E7A;">
+<nav class="navbar navbar-expand-lg navbar-dark col-md-12" style="background:#546E7A; position: fixed;z-index: 1; top: 0">
     <a class="navbar-brand" style="color: white">EStore</a>
 
     <div class="collapse navbar-collapse">
@@ -16,11 +16,22 @@
                 if (usr1 == null) {
             %>
 
+            <li class="nav-item active ml-3">
+                <div class="navbar-profile-picture">
+                    <img src="img/user/alt_profile.png" style="width:40px; height: 40px" alt="Profile Picture" class="rounded-circle">
+                </div>
+            </li>
+
             <li class="nav-item active">
                 <a class="nav-link" href="login.jsp">Account</a>
             </li>
 
             <%} else {%>
+            <li class="nav-item active ml-3">
+                <div class="navbar-profile-picture mt-0">
+                    <img src="img/user/<%=usr1.getProfilePic()%>" style="width:40px; height: 40px"  class="rounded-circle">
+                </div>
+            </li>
             <li class="nav-item active">
                 <a class="nav-link" href="<%=usr1.getRole().equals("admin")?"admin.jsp":"user.jsp"%>"><%=usr1.getUserName()%>
                 </a>

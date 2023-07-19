@@ -34,7 +34,7 @@
 
     %>
 <%--    show categories--%>
-    <div class="col-md-2">
+    <div class="col-md-2 " style="position: fixed;margin-top: 50px">
 
         <div class="list-group mt-4">
             <a href="#" class="list-group-item list-group-item-action active">Categories</a>
@@ -49,8 +49,8 @@
     </div>
 
 <%--    Show products--%>
-    <div class="col-md-10">
-        <div class="row mt-4">
+    <div class="col-md-10 ml-auto" style="margin-top: 50px">
+        <div class="row mt-4" >
             <div class="col-md-12">
                 <div class="card-columns">
                     <%
