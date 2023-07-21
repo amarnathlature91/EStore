@@ -10,7 +10,18 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <script>
+        //function to assign cart data to hidden input field
+        function fetchCartToServer() {
+            const cart = JSON.parse(localStorage.getItem('cart'));
+
+            // Convert the cart to JSON format
+            const cartJson = JSON.stringify(cart);
+            document.getElementById("cartId").value=cartJson;
+        }
+
+    </script>
+    <title>Checkout</title>
     <%@include file="components/common_css_js.jsp" %>
 </head>
 <body>
@@ -32,25 +43,29 @@
             <div class="card">
                 <div class="card-body">
                     <h2 class="text-center mb-4">Your details for order</h2>
-                    <form action="">
+                    <form action="/EStore_war_exploded/PlaceOrderServlet" method="post" onsubmit="fetchCartToServer()">
                         <div class="form-group">
                             <label for="bilEmail">Email address</label>
-                            <input value="<%=usr.getEmail()%>" type="email" class="form-control" id="bilEmail" aria-describedby="emailHelp" placeholder="Enter email">
+                            <input value="<%=usr.getEmail()%>" name="bilEmail" type="email" class="form-control" id="bilEmail"
+                                   aria-describedby="emailHelp" placeholder="Enter email">
                         </div>
                         <div class="form-group">
                             <label for="bilName">Billing Name</label>
-                            <input value="<%=usr.getUserName()%>" type="text" class="form-control" id="bilName" aria-describedby="emailHelp" placeholder="Enter email">
+                            <input value="<%=usr.getUserName()%>" name="bilName" type="text" class="form-control" id="bilName"
+                                   aria-describedby="emailHelp" placeholder="Enter email">
                         </div>
                         <div class="form-group">
-                            <label for="bilName">Contact Number</label>
-                            <input value="<%=usr.getContact()%>" type="text" class="form-control" id="bilName" aria-describedby="emailHelp" placeholder="Enter email">
+                            <label for="bilcn">Contact Number</label>
+                            <input value="<%=usr.getContact()%>" name="bilcn" type="text" class="form-control" id="bilcn"
+                                   aria-describedby="emailHelp" placeholder="Enter email">
                         </div>
                         <div class="form-group">
                             <label for="bilAdd">Shipping/Billing Address</label>
-                            <textarea class="form-control" id="bilAdd" rows="3"><%=usr.getAddress()%></textarea>
+                            <textarea class="form-control" name="bilAdd" id="bilAdd" rows="3"><%=usr.getAddress()%></textarea>
                         </div>
                         <div class="container text-center">
-                            <button class="btn btn-success">Order Now</button>
+                            <input type="hidden" value="" name="cart" id="cartId">
+                            <button type="submit" class="btn btn-success">Order Now</button>
                             <button class="btn btn-primary">Continue Shopping</button>
                         </div>
                     </form>

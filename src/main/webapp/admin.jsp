@@ -52,7 +52,7 @@
 
         <%--        second column--%>
         <div class="col-md-4">
-            <div class="card text-center">
+            <div class="card text-center" onclick="window.location.href='orders.jsp'">
                 <div class="card-body">
                     <div class="container img-fluid">
                         <img style="max-width: 100px" src="img/orders.png" alt="icon.png">
@@ -148,11 +148,11 @@
 
 <%--model--%>
 <!-- Modal addCategory  start-->
-<div class="modal fade" id="addCategoryModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="addCategoryModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Add Category</h5>
+                <h5 class="modal-title" id="exampleModalLabel1">Add Category</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>

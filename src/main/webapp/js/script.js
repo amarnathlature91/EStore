@@ -89,7 +89,6 @@ $(document).ready(function () {
 })
 
 // toast function start
-
 function showToast(content) {
     $('#toast').addClass("display");
     $('#toast').html(content);
@@ -104,3 +103,4 @@ function goToCheckOut() {
 
     window.location="checkout.jsp"
 }
+

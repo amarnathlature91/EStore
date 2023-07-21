@@ -15,5 +15,6 @@
         <mapping class="com.estore.entities.User" />
         <mapping class="com.estore.entities.Category" />
         <mapping class="com.estore.entities.Product" />
+        <mapping class="com.estore.entities.Order" />
     </session-factory>
 </hibernate-configuration>
