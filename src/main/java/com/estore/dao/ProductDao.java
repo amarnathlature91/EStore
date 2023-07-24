@@ -61,4 +61,40 @@ public class ProductDao {
         ss.close();
         return plist;
     }
+
+    public void updateProductWithPhotoChange(int pId,String pName,int price,int discount,int quantity,String photo ){
+        Session sess = this.factory.openSession();
+        Transaction tx = sess.beginTransaction();
+        Product p = sess.get(Product.class, pId);
+        p.setpName(pName);
+        p.setpPrice(price);
+        p.setpDiscount(discount);
+        p.setpQuantity(quantity);
+        p.setpPhoto(photo);
+        sess.update(p);
+        tx.commit();
+        sess.close();
+    }
+
+    public void updateProduct(int pId,String pName,int price,int discount,int quantity){
+        Session sess = this.factory.openSession();
+        Transaction tx = sess.beginTransaction();
+        Product p = sess.get(Product.class, pId);
+        p.setpName(pName);
+        p.setpPrice(price);
+        p.setpDiscount(discount);
+        p.setpQuantity(quantity);
+        sess.update(p);
+        tx.commit();
+        sess.close();
+    }
+
+    public void deleteProductById(int pId){
+        Session ss = this.factory.openSession();
+        Transaction tx = ss.beginTransaction();
+        Product p = ss.get(Product.class, pId);
+        ss.delete(p);
+        tx.commit();
+        ss.close();
+    }
 }

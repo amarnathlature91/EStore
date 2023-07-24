@@ -22,24 +22,7 @@ public class ProductOperationServlet extends HttpServlet {
 //        fetch operation
         String opr = request.getParameter("op");
 
-        if (opr.trim().equals("addCategory")){
-//            fetching parameters
-            String title = request.getParameter("cat");
-            String desciption = request.getParameter("des");
-
-//            creating category object
-            Category cat = new Category();
-            cat.setTitle(title);
-            cat.setDescription(desciption);
-
-            CategoryDao catDao = new CategoryDao(FactoryProvider.getFactory());
-            catDao.saveCategory(cat);
-            HttpSession session = request.getSession();
-            session.setAttribute("msg","Category added successfully.");
-            response.sendRedirect("admin.jsp");
-
-
-        } else if (opr.trim().equals("addProduct")) {
+        if (opr.trim().equals("addProduct")) {
 
 //            fetching parameters
             String name = request.getParameter("nm");
@@ -84,6 +67,66 @@ public class ProductOperationServlet extends HttpServlet {
             HttpSession session = request.getSession();
             session.setAttribute("msg","Product added successfully.");
             response.sendRedirect("admin.jsp");
+
+        }else if (opr.trim().equals("updateProduct")){
+            Part photo = request.getPart("photo");
+            if (photo.getSize()>0){
+                //fetching parameters
+                String name = request.getParameter("name");
+                int price = Integer.parseInt(request.getParameter("price").trim());
+                int discount =Integer.parseInt( request.getParameter("discount").trim());
+                int quantity = Integer.parseInt(request.getParameter("quantity").trim());
+                int pId=Integer.parseInt(request.getParameter("pId"));
+
+                //deleting old photo
+                try{
+                    String oldpht = new ProductDao(FactoryProvider.getFactory()).getProductById(pId).getpPhoto();
+                    String filePath = request.getRealPath("img") + File.separator + "product" + File.separator + oldpht;
+                    System.out.println(filePath);
+                    File file = new File(filePath);
+                    file.delete();
+                }catch (Exception e){
+                    e.printStackTrace();
+                }
+                //updating product with photo name
+                new ProductDao(FactoryProvider.getFactory()).updateProductWithPhotoChange(pId,name,price,discount,quantity, photo.getSubmittedFileName());
+
+//                saving new photo
+                String path=request.getRealPath("img")+File.separator+"product"+File.separator+photo.getSubmittedFileName();
+                try {
+                    FileOutputStream fos = new FileOutputStream(path);
+                    InputStream is = photo.getInputStream();
+                    int read = 0;
+                    byte[] bytes = new byte[1024];
+                    while ((read = is.read(bytes)) != -1) {
+                        fos.write(bytes, 0, read);
+                    }
+                    is.close();
+                    fos.flush();
+                    fos.close();
+                }catch (Exception e){
+                    e.printStackTrace();
+                }
+
+            }else {
+                //fetching parameters
+                String name = request.getParameter("name");
+                int price = Integer.parseInt(request.getParameter("price").trim());
+                int discount =Integer.parseInt( request.getParameter("discount").trim());
+                int quantity = Integer.parseInt(request.getParameter("quantity").trim());
+                int pId=Integer.parseInt(request.getParameter("pId"));
+
+                new ProductDao(FactoryProvider.getFactory()).updateProduct(pId,name,price,discount,quantity);
+            }
+            HttpSession session = request.getSession();
+            session.setAttribute("msg","Product updated successfully.");
+            response.sendRedirect("allProducts.jsp");
+        } else if (opr.trim().equals("deleteProduct")){
+            int pId=Integer.parseInt(request.getParameter("pId"));
+            new ProductDao(FactoryProvider.getFactory()).deleteProductById(pId);
+            HttpSession session = request.getSession();
+            session.setAttribute("msg","Product deleted successfully.");
+            response.sendRedirect("allProducts.jsp");
         }
     }
 }

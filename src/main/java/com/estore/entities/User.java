@@ -1,6 +1,8 @@
 package com.estore.entities;
 
 import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 public class User {
@@ -16,6 +18,21 @@ public class User {
     private String address;
     private String role;
 
+    @ManyToMany(fetch = FetchType.EAGER,cascade =CascadeType.ALL)
+    @JoinTable(
+            name = "user_favorite_products",
+            joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "product_id")
+    )
+    private Set<Product> favoriteProducts = new HashSet<>();
+
+    public Set<Product> getFavoriteProducts() {
+        return favoriteProducts;
+    }
+
+    public void setFavoriteProducts(Set<Product> favoriteProducts) {
+        this.favoriteProducts = favoriteProducts;
+    }
 
     public String getRole() {
         return role;

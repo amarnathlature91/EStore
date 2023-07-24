@@ -15,16 +15,16 @@ public class CategoryDao {
         this.factory = factory;
     }
 
-    public int saveCategory( Category cat){
+    public int saveCategory(Category cat) {
         Session session = this.factory.openSession();
         Transaction tx = session.beginTransaction();
-        int catId=(int) session.save(cat);
+        int catId = (int) session.save(cat);
         tx.commit();
         session.close();
         return catId;
     }
 
-    public List<Category> getCategories(){
+    public List<Category> getCategories() {
         Session session = this.factory.openSession();
         Query q;
         q = session.createQuery("from Category");
@@ -33,16 +33,35 @@ public class CategoryDao {
         return clist;
     }
 
-    public Category getCategoryById(int cId){
-        Category cat=null;
-    try {
-        Session session = this.factory.openSession();
-         cat = session.get(Category.class, cId);
-         session.close();
+    public Category getCategoryById(int cId) {
+        Category cat = null;
+        try {
+            Session session = this.factory.openSession();
+            cat = session.get(Category.class, cId);
+            session.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return cat;
     }
-    catch (Exception e){
-        e.printStackTrace();
+
+    public void updateCategory(int cId, String title, String description) {
+        Session sess = this.factory.openSession();
+        Transaction tx = sess.beginTransaction();
+        Category c = sess.get(Category.class, cId);
+        c.setTitle(title);
+        c.setDescription(description);
+        sess.update(c);
+        tx.commit();
+        sess.close();
     }
-    return cat;
+
+    public void deleteCategoryById(int cId) {
+        Session ss = this.factory.openSession();
+        Transaction tx = ss.beginTransaction();
+        Category c = ss.get(Category.class, cId);
+        ss.delete(c);
+        tx.commit();
+        ss.close();
     }
 }

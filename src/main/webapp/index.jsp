@@ -13,7 +13,10 @@
 </head>
 <body>
 <%@include file="components/navbar.jsp" %>
-<div class="row mt-3 mx-2">
+<div style="margin-top: 80px" tabindex="-1">
+    <%@include file="components/message.jsp"%>
+</div>
+<div class="row mt-1 mx-2">
     <%
         CategoryDao cd = new CategoryDao(FactoryProvider.getFactory());
         List<Category> cs = cd.getCategories();
@@ -34,7 +37,7 @@
 
     %>
 <%--    show categories--%>
-    <div class="col-md-2 " style="position: fixed;margin-top: 50px">
+    <div class="col-md-2 " style="position: fixed;margin-top: 30px">
 
         <div class="list-group mt-4">
             <a href="#" class="list-group-item list-group-item-action active">Categories</a>
@@ -49,7 +52,7 @@
     </div>
 
 <%--    Show products--%>
-    <div class="col-md-10 ml-auto" style="margin-top: 50px">
+    <div class="col-md-10 ml-auto" style="margin-top: 30px">
         <div class="row mt-4" >
             <div class="col-md-12">
                 <div class="card-columns">
@@ -68,6 +71,15 @@
                         <div class="card-footer text-center">
                             <a href="#" class="btn btn-primary" onclick="addToCart(<%=p.getpId()%>,'<%=p.getpName()%>',<%=p.getDiscountedPrice()%>)">Add to cart</a>
                             <a href="#" class="btn btn-outline-success">&#8377; <%=p.getDiscountedPrice()%>/- <strike class="text-secondary discount-label"> &#8377; <%=p.getpPrice()%>/- </strike><span class="badge badge-warning"> (<%=p.getpDiscount()%>% off)</span></a>
+                            <% User u = (User) session.getAttribute("current-user");
+                            if (u== null){} else {%>
+                            <form action="/EStore_war_exploded/UserOperationServlet" method="post">
+                                <input type="hidden" name="uId" value="<%=u.getUserId()%>">
+                                <input type="hidden" name="pId" value="<%=p.getpId()%>">
+                                <input type="hidden" name="op" value="addFavorite">
+                                <button type="submit" class="btn btn-secondary"> Add To Favorites</button>
+                            </form>
+                            <%}%>
                         </div>
                     </div>
                     <%

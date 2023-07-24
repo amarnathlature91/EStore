@@ -10,24 +10,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef580a4c-2436-4cee-9ad5-0587ed31f6b4" name="Changes" comment="Commited project 3">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/estore/dao/OrderDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/estore/entities/Cart.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/estore/entities/Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/estore/servlets/OrderOperationServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/estore/servlets/PlaceOrderServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/Nav.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/product/alt_profile.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/nonShippedOrders.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/orderPlaced.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/orders.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/bf9f1640-a204-47e1-92f0-c14b7658f292.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/bf9f1640-a204-47e1-92f0-c14b7658f292.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/estore/servlets/CategoryOperationServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/estore/servlets/SearchForOrder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/estore/servlets/UserOperationServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/allCategories.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/allProducts.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/allUsers.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/favorites.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/delete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/fav.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/estore/dao/CategoryDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/estore/dao/CategoryDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/estore/dao/OrderDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/estore/dao/OrderDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/estore/dao/ProductDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/estore/dao/ProductDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/estore/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/estore/dao/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/estore/entities/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/estore/entities/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/estore/entities/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/estore/entities/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/estore/entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/estore/entities/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/estore/servlets/ProductOperationServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/estore/servlets/ProductOperationServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Nav.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/searchOrder.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/admin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/checkout.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/checkout.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/nonShippedOrders.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/user.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/user.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,9 +48,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="Servlet" />
         <option value="Class" />
         <option value="Jsp File" />
-        <option value="Servlet" />
       </list>
     </option>
   </component>
@@ -87,7 +94,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;deletionFromPopupRequiresConfirmation&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/amarl/Documents/MyProjects/EStore/target/EStore-1.0-SNAPSHOT/img/product&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/amarl/Documents/MyProjects/EStore/src/main/webapp/img&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.17&quot;,
@@ -101,11 +108,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\amarl\Documents\MyProjects\EStore\src\main\webapp\img" />
       <recent name="C:\Users\amarl\Documents\MyProjects\EStore\target\EStore-1.0-SNAPSHOT\img\product" />
       <recent name="C:\Users\amarl\Documents\MyProjects\EStore\src\main\webapp\img\product" />
       <recent name="C:\Users\amarl\Documents\MyProjects\EStore\src\main\webapp\img\user" />
       <recent name="C:\Users\amarl\Documents\MyProjects\EStore\target\EStore-1.0-SNAPSHOT\img\user" />
-      <recent name="C:\Users\amarl\Documents\MyProjects\EStore\src\main\webapp\img" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\amarl\Documents\MyProjects\EStore\target\EStore-1.0-SNAPSHOT\img\user" />
@@ -116,16 +123,7 @@
       <command value="PlaceOrder" />
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.orders.jsp">
-    <configuration name="Nav.jsp" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:8181/EStore_war_exploded/Nav.jsp">
-      <method v="2" />
-    </configuration>
-    <configuration name="nonShippedOrders.jsp" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:8181/EStore_war_exploded/nonShippedOrders.jsp">
-      <method v="2" />
-    </configuration>
-    <configuration name="orders.jsp" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:8181/EStore_war_exploded/orders.jsp">
-      <method v="2" />
-    </configuration>
+  <component name="RunManager">
     <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
       <deployment />
       <server-settings>
@@ -295,19 +293,6 @@
         </option>
       </method>
     </configuration>
-    <list>
-      <item itemvalue="JavaScript Debug.Nav.jsp" />
-      <item itemvalue="JavaScript Debug.nonShippedOrders.jsp" />
-      <item itemvalue="JavaScript Debug.orders.jsp" />
-      <item itemvalue="Tomcat Server.index.jsp" />
-    </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="JavaScript Debug.orders.jsp" />
-        <item itemvalue="JavaScript Debug.nonShippedOrders.jsp" />
-        <item itemvalue="JavaScript Debug.Nav.jsp" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -345,7 +330,10 @@
       <workItem from="1689884178043" duration="69000" />
       <workItem from="1689884275987" duration="786000" />
       <workItem from="1689909200097" duration="12431000" />
-      <workItem from="1689929701380" duration="12236000" />
+      <workItem from="1689929701380" duration="20027000" />
+      <workItem from="1690099224435" duration="11808000" />
+      <workItem from="1690129460453" duration="6492000" />
+      <workItem from="1690166939796" duration="20715000" />
     </task>
     <task id="LOCAL-00001" summary="Commited project">
       <created>1689568879328</created>
@@ -368,7 +356,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689744405362</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Commited project 3">
+      <created>1689948565345</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1689948565345</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -389,6 +384,17 @@
     <MESSAGE value="Commited project" />
     <MESSAGE value="Commited project 3" />
     <option name="LAST_COMMIT_MESSAGE" value="Commited project 3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/estore/servlets/UserOperationServlet.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

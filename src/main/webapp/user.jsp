@@ -1,12 +1,19 @@
-<%
+<%@ page import="com.estore.dao.UserDao" %>
+<%@ page import="com.estore.helper.FactoryProvider" %>
+<%@ page import="com.estore.entities.Product" %>
+<%@ page import="java.util.Set" %>
+<%@ page import="com.estore.dao.OrderDao" %>
+<%@ page import="com.estore.entities.Order" %>
+<%@ page import="java.util.List" %>
 
+<%
     User usr = (User) session.getAttribute("current-user");
     if (usr == null) {
         session.setAttribute("msg", "You have to login to access this page");
         response.sendRedirect("login.jsp");
         return;
     }
-
+    List<Order> ordersByUserId = new OrderDao(FactoryProvider.getFactory()).getOrdersByUserId(usr.getUserId());
 %>
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -87,20 +94,21 @@
                     <div class="container img-fluid">
                         <img style="max-width: 100px" src="img/orders.png" alt="icon.png">
                     </div>
-                    <h2>45</h2>
+                    <h2><%=ordersByUserId.size()%></h2>
                     <h1>Orders</h1>
                 </div>
             </div>
         </div>
 
         <%--        third column--%>
+            <% Set<Product> favoritesByUId = new UserDao(FactoryProvider.getFactory()).getFavoritesByUId(usr.getUserId());%>
         <div class="col-md-4">
-            <div class="card text-center">
+            <div class="card text-center" onclick="window.location.href='favorites.jsp'">
                 <div class="card-body">
                     <div class="container img-fluid">
                         <img style="max-width: 100px" src="img/favorites.png" alt="icon.png">
                     </div>
-                    <h2>15</h2>
+                    <h2><%=favoritesByUId.size()%></h2>
                     <h1>Favorites</h1>
                 </div>
             </div>

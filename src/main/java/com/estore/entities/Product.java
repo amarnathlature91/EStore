@@ -14,7 +14,7 @@ public class Product {
     private int  pPrice;
     private int  pDiscount;
     private int pQuantity;
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     private Category category;
 
     public int getpId() {

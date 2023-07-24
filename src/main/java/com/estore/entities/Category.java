@@ -11,7 +11,7 @@ public class Category {
     private int catId;
     private String title;
     private String description;
-    @OneToMany(mappedBy = "category")
+    @OneToMany(mappedBy = "category",cascade= CascadeType.ALL,orphanRemoval = true,fetch = FetchType.LAZY)
     private List<Product> products;
 
     public Category(int catId, String title, String description, List<Product> products) {

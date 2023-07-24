@@ -5,6 +5,8 @@
 <%@ page import="java.util.List" %>
 <%@ page import="com.estore.dao.UserDao" %>
 <%@ page import="com.estore.dao.ProductDao" %>
+<%@ page import="com.estore.dao.OrderDao" %>
+<%@ page import="com.estore.entities.Order" %>
 <%
     User usr = (User) session.getAttribute("current-user");
     if (usr == null) {
@@ -20,6 +22,7 @@
     UserDao userDao=new UserDao(FactoryProvider.getFactory());
     CategoryDao categoryDao=new CategoryDao(FactoryProvider.getFactory());
     ProductDao productDao=new ProductDao(FactoryProvider.getFactory());
+    List<Order> allOrders = new OrderDao(FactoryProvider.getFactory()).getAllOrders();
 
 %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -57,7 +60,7 @@
                     <div class="container img-fluid">
                         <img style="max-width: 100px" src="img/orders.png" alt="icon.png">
                     </div>
-                    <h2>45</h2>
+                    <h2><%=allOrders.size()%></h2>
                     <h1>Orders</h1>
                 </div>
             </div>
@@ -65,13 +68,12 @@
 
         <%--        third column--%>
         <div class="col-md-4">
-            <div class="card text-center">
+            <div class="card text-center" onclick="window.location.href='searchOrder.jsp'">
                 <div class="card-body">
                     <div class="container img-fluid">
                         <img style="max-width: 100px" src="img/favorites.png" alt="icon.png">
                     </div>
-                    <h2>15</h2>
-                    <h1>Favorites</h1>
+                    <h1>Search Order By OrderId</h1>
                 </div>
             </div>
         </div>
@@ -80,7 +82,7 @@
 <div class="row mt-4">
         <%--        first column--%>
         <div class="col-md-4">
-            <div class="card text-center">
+            <div class="card text-center" onclick="window.location.href='allUsers.jsp'">
                 <div class="card-body">
                     <div class="container img-fluid">
                         <img style="max-width: 100px" src="img/usersicon.png" alt="icon.png">
@@ -93,7 +95,7 @@
 
         <%--        second column--%>
         <div class="col-md-4">
-            <div class="card text-center">
+            <div class="card text-center" onclick="window.location.href='allCategories.jsp'">
                 <div class="card-body">
                     <div class="container img-fluid">
                         <img style="max-width: 100px" src="img/categoriesicon.png" alt="icon.png">
@@ -106,7 +108,7 @@
 
         <%--        third column--%>
         <div class="col-md-4">
-            <div class="card text-center">
+            <div class="card text-center" onclick="window.location.href='allProducts.jsp'">
                 <div class="card-body">
                     <div class="container img-fluid">
                         <img style="max-width: 100px" src="img/producticon.png" alt="icon.png">
@@ -144,6 +146,20 @@
         </div>
 
     </div>
+<%--    third row--%>
+    <div class="row mt-4">
+        <div class="col-md-12">
+            <div class="card text-center" onclick="window.location.href='favorites.jsp'">
+                <div class="card-body">
+                    <div class="container img-fluid">
+                        <img src="img/favorites.png" height="150px" width="150px">
+                        <h1>Favorites</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
 
 <%--model--%>
@@ -159,14 +175,14 @@
             </div>
             <div class="modal-body">
                 <div class="form-control">
-                    <form action="ProductOperationServlet" method="post">
+                    <form action="/EStore_war_exploded/CategoryOperationServlet" method="post">
                         <input type="hidden" name="op" value="addCategory">
                         <div class="form-group">
                             <label for="cat">Title</label>
                             <input type="text" id="cat" name="cat" class="form-control" placeholder="Enter Category title">
                             <label for="des">Description</label>
                             <div class="form-group">
-                                <textarea style="height: 150px" id="des" name="des" class="form-control mb-3" placeholder="Enter Category description"></textarea>
+                                <textarea class="form-control"style="height: 150px" id="des" name="des"></textarea>
                             </div>
                             <button type="submit" class="btn btn-success">Add</button>
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
