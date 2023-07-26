@@ -10,31 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef580a4c-2436-4cee-9ad5-0587ed31f6b4" name="Changes" comment="Commited project 3">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/estore/servlets/CategoryOperationServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/estore/servlets/SearchForOrder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/estore/servlets/UserOperationServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/allCategories.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/allProducts.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/allUsers.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/favorites.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/delete.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/fav.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/estore/dao/CategoryDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/estore/dao/CategoryDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/estore/dao/OrderDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/estore/dao/OrderDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/estore/dao/ProductDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/estore/dao/ProductDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/estore/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/estore/dao/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/estore/entities/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/estore/entities/Category.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/estore/entities/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/estore/entities/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/estore/entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/estore/entities/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/estore/servlets/ProductOperationServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/estore/servlets/ProductOperationServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/Nav.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/searchOrder.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/nonShippedOrders.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/user.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/user.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/bf9f1640-a204-47e1-92f0-c14b7658f292.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/bf9f1640-a204-47e1-92f0-c14b7658f292.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -334,6 +310,7 @@
       <workItem from="1690099224435" duration="11808000" />
       <workItem from="1690129460453" duration="6492000" />
       <workItem from="1690166939796" duration="20715000" />
+      <workItem from="1690192063599" duration="40000" />
     </task>
     <task id="LOCAL-00001" summary="Commited project">
       <created>1689568879328</created>
@@ -363,7 +340,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689948565345</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Commited project 3">
+      <created>1690192081091</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1690192081091</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
